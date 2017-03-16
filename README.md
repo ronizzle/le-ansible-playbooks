@@ -1,6 +1,6 @@
-# random-ansible-playbooks
+# le ansible playbooks
 
-#ping
+##ping
 
 ansible -i hosts all -m ping -u ec2-user
 
