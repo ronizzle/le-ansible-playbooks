@@ -1,0 +1,9 @@
+--- hosts
+- hosts: webservers
+  vars:
+    - WelcomeMsg: "Welcome to this demo"
+
+
+    tasks:
+     - name: Setup Nginx
+     - yum: pk

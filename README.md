@@ -2,7 +2,7 @@
 
 ##ping
 
-ansible -i hosts all -m ping -u ec2-user
+ansible -i hosts all -m ping -u ec2-user or ubuntu 
 
 ```
 52.220.53.163 | SUCCESS => {
@@ -10,3 +10,5 @@ ansible -i hosts all -m ping -u ec2-user
     "ping": "pong"
 }
 ```
+you need the key for the ec2 hosts 
+add via `ssh-add keyfilefromaws.pem`
