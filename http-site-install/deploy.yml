@@ -1,0 +1,11 @@
+- hosts: webservers
+  become: yes
+  become_method: sudo
+  remote_user: ubuntu
+  gather_facts: False
+  vars:
+    SampleMsg: "This is an Apache page"
+
+  tasks:
+    - include: 'tasks/01-install-apache.yml'
+    - include: 'tasks/02-deploy-website-files.yml'

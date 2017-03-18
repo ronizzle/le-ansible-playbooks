@@ -1,4 +1,4 @@
-- name: Copy index.html file into nginx directory
+- name: Deploy website files into apache's web root
   template:
     src=src/index.html
     dest=/var/www/html/index.html
