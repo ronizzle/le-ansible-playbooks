@@ -7,5 +7,5 @@
     SampleMsg: "Welcome to this demo"
 
   tasks:
-    - include: 'tasks/nginx-install.yml'
-    - include: 'tasks/copy-file.yml'
+    - include: 'roles/tasks/01-install-nginx.yml'
+    - include: 'roles/tasks/02-deploy-website-files.yml'
