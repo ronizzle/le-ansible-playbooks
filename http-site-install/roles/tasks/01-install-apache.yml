@@ -13,5 +13,8 @@
   apache2_module:
     name: rewrite
     state: present
-    notify:
-      - restart apache 2
+
+- name: APACHE - restart Apache2 service
+  service:
+    name: apache2
+    state: restarted

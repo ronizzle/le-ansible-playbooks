@@ -1,4 +1,15 @@
-- name: Deploy website files into apache's web root
-  template:
-    src=src/index.html
-    dest=/var/www/html/index.html
+- name: Deploy index.html into apache's web root
+  copy:
+    src: roles/src/index.html
+    dest: /var/www/html/index.html
+
+- name: Deploy .htaccess into apache's web root
+  copy:
+    src: roles/src/.htaccess
+    dest: /var/www/html/.htaccess
+
+- name: Deploy 404.html into apache's web root
+  copy:
+    src: roles/src/404.html
+    dest: /var/www/html/404.html
+

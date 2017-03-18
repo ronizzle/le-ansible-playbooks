@@ -7,5 +7,9 @@
     SampleMsg: "This is an Apache page"
 
   tasks:
-    - include: 'tasks/01-install-apache.yml'
-    - include: 'tasks/02-deploy-website-files.yml'
+    - include: 'roles/tasks/01-install-apache.yml'
+    - include: 'roles/tasks/02-deploy-website-files.yml'
+
+  handlers:
+    - name: restart apache2
+      service: name=apache2 state=restarted
